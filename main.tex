@@ -2,10 +2,24 @@
 
 \documentclass[oneside]{book}
 
+% Fix the extra space around \left & \right.
+\let\originalleft\left
+\renewcommand{\left}{\mathopen{}\mathclose\bgroup\originalleft}
+\let\originalright\right
+\renewcommand{\right}{\aftergroup\egroup\originalright}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\newcommand{\F}{\mathbf{F}}
+
+\newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
+
 % Set the fonts.
 \usepackage{fontspec}
 \setmainfont{Times New Roman}
 \setsansfont{Arial}
+
+\renewcommand{\thesection}{\arabic{chapter}.\Alph{section}}
 
 \usepackage[many]{tcolorbox}
 \definecolor{exmain}{HTML}{CA6C37}
