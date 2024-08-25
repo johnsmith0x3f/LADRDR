@@ -1,4 +1,5 @@
 %! TEX TS-program = xelatex
+%! TEX encoding = UTF-8
 
 \documentclass[oneside]{book}
 
@@ -12,13 +13,29 @@
 \usepackage{amssymb}
 \newcommand{\F}{\mathbf{F}}
 
+\DeclareMathAlphabet{\mathcal}{OMS}{zplm}{m}{n}
+\DeclareMathOperator{\Lmap}{\mathcal{L}}
+
+\newcommand{\conj}{\bar}
+
+\newcommand{\inp}[2]{\left\langle #1, #2 \right\rangle}
 \newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
+
+\DeclareMathOperator{\nul}{null}
+
+% Proofs and Solutions
+\usepackage{amsthm}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\newenvironment{solution}{\begin{proof}[Solution]}{\end{proof}}
+
+\usepackage{newtxmath}
 
 % Set the fonts.
 \usepackage{fontspec}
 \setmainfont{Times New Roman}
 \setsansfont{Arial}
 
+\usepackage{titlesec}
 \renewcommand{\thesection}{\arabic{chapter}.\Alph{section}}
 
 \usepackage[many]{tcolorbox}
@@ -40,6 +57,6 @@
 
 \maketitle
 
-\input{Chapter_6.tex}
+\input{chapter06.tex}
 
 \end{document}

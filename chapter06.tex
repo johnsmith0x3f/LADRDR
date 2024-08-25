@@ -1,0 +1,38 @@
+\chapter{Inner Product Spaces}
+
+\section{Inner Products and Norms}
+
+\begin{exercise}{5}
+	Suppose $T \in \Lmap(V)$ is such that $\norm{Tv} \le \norm{v}$ for every $v \in V$. Prove that $T-\sqrt{2}I$ is invertible.
+\end{exercise}
+
+\begin{proof}
+	Suppose $V$ is finite-dimensional. Suppose $u \in \nul(T - \sqrt{2}I)$. Then we have $Tu = \sqrt{2}u$, and hence $\norm{Tu} = \norm{\sqrt{2}u} = \sqrt{2}\norm{u}$. Since $\norm{tv} \le \norm{v}$, this implies that $u = 0$.
+\end{proof}
+
+\begin{exercise}{6}
+	Suppose $u, v \in \Lmap(V)$. Prove that $\inp{u}{v} = 0$ if and only if
+	\[
+		\norm{u} \le \norm{u + av}
+	\]
+	for all $a \in \F$.
+\end{exercise}
+
+\begin{solution}
+	
+\end{solution}
+
+\begin{exercise}{8}
+	Suppose $u, v \in V$ and $\norm{u} = \norm{v} = 1$ and $\inp{u}{v} = 1$. Prove that $u = v$.
+\end{exercise}
+
+\begin{proof}
+	Note that
+	\[
+		\norm{u - v}^{2} = \inp{u - v}{u - v}
+		                 = \norm{u}^{2} - \inp{u}{v} - \inp{v}{u} + \norm{v}^{2}
+		                 = 0.
+	\]
+	Hence $u - v = 0$ by definiteness.
+\end{proof}
+
