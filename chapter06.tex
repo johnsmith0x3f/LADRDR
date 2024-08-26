@@ -19,7 +19,17 @@
 \end{exercise}
 
 \begin{solution}
-	
+	If $\inp{u}{v} = 0$, then
+	\[
+		\norm{u + av}^{2} - \norm{u}^{2} = \norm{av}^{2} \ge 0.
+	\]
+	by the Pythagorean Theorem.
+
+	If $\norm{u} \le \norm{u + av}$ for all $a \in \F$, then
+	\[
+		0 \le \norm{u + av}^{2} - \norm{u}^{2} = \conj{a}\inp{u}{v} + a\conj{\inp{u}{v}} + \abs{a}^{2}\norm{v}^{2}.
+	\]
+	Letting $a = -\frac{\inp{u}{v}}{\norm{v}^{2}}$ yields $\inp{u}{v} = 0$.
 \end{solution}
 
 \begin{exercise}{8}
@@ -29,10 +39,19 @@
 \begin{proof}
 	Note that
 	\[
-		\norm{u - v}^{2} = \inp{u - v}{u - v}
-		                 = \norm{u}^{2} - \inp{u}{v} - \inp{v}{u} + \norm{v}^{2}
-		                 = 0.
+		\norm{u - v}^{2} = \inp{u - v}{u - v} = \norm{u}^{2} - \inp{u}{v} - \inp{v}{u} + \norm{v}^{2} = 0.
 	\]
 	Hence $u - v = 0$ by definiteness.
 \end{proof}
 
+\begin{exercise}{11}
+	Prove that
+	\[
+		16 \le (a + b + c + d)\left(\frac{1}{a} + \frac{1}{b} + \frac{1}{c} + \frac{1}{d}\right)
+	\]
+	for all positive numbers $a, b, c, d$.
+\end{exercise}
+
+\begin{proof}
+	Let $u = \left(\sqrt[]{a}, \sqrt[]{b}, \sqrt[]{c}, \sqrt[]{d}\right), v = \left(\frac{1}{\sqrt[]{a}}, \frac{1}{\sqrt[]{b}}, \frac{1}{\sqrt[]{c}}, \frac{1}{\sqrt[]{d}}\right)$. Then it follows directly from the Cauchy-Schuarz Inequality.
+\end{proof}
