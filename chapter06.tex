@@ -3,37 +3,37 @@
 \section{Inner Products and Norms}
 
 \begin{exercise}{5}
-	Suppose \( T \in \Lmap(V) \) is such that \(\norm{Tv} \le \norm{v}\) for every \(v \in V\). Prove that \(T-\sqrt{2}I\) is invertible.
+	Suppose \( T \in \Lmap(V) \) is such that \( \norm{Tv} \le \norm{v} \) for every \( v \in V \). Prove that \( T-\sqrt{2}I \) is invertible.
 \end{exercise}
 
 \begin{proof}
-	Suppose \(V\) is finite-dimensional. For all \(u \in \nul(T - \sqrt{2}I)\), we have \(Tu = \sqrt{2}u\), and hence \(\norm{Tu} = \norm{\sqrt{2}u} = \sqrt{2}\norm{u}\). Since \(\norm{tv} \le \norm{v}\), this implies that \(u = 0\).
+	Suppose \( V \) is finite-dimensional. For all \( u \in \nul(T - \sqrt{2}I) \), we have \( Tu = \sqrt{2}u \), and hence \( \norm{Tu} = \norm{\sqrt{2}u} = \sqrt{2}\norm{u} \). Since \( \norm{tv} \le \norm{v} \), this implies that \( u = 0 \).
 \end{proof}
 
 \begin{exercise}{6}
-	Suppose \(u, v \in \Lmap(V)\). Prove that \(\inp{u}{v} = 0\) if and only if
+	Suppose \( u, v \in \Lmap(V) \). Prove that \( \inp{u}{v} = 0 \) if and only if
 	\[
 		\norm{u} \le \norm{u + av}
 	\]
-	for all \(a \in \F\).
+	for all \( a \in \F \).
 \end{exercise}
 
 \begin{solution}
-	If \(\inp{u}{v} = 0\), then
+	If \( \inp{u}{v} = 0 \), then
 	\[
 		\norm{u + av}^{2} - \norm{u}^{2} = \norm{av}^{2} \ge 0.
 	\]
 	by the Pythagorean Theorem.
 
-	If \(\norm{u} \le \norm{u + av}\) for all \(a \in \F\), then
+	If \( \norm{u} \le \norm{u + av} \) for all \( a \in \F \), then
 	\[
 		0 \le \norm{u + av}^{2} - \norm{u}^{2} = \conj{a}\inp{u}{v} + a\conj{\inp{u}{v}} + \abs{a}^{2}\norm{v}^{2}.
 	\]
-	Letting \(a = -\frac{\inp{u}{v}}{\norm{v}^{2}}\) yields \(\inp{u}{v} = 0\).
+	Letting \( a = -\frac{\inp{u}{v}}{\norm{v}^{2}} \) yields \( \inp{u}{v} = 0 \).
 \end{solution}
 
 \begin{exercise}{8}
-	Suppose \(u, v \in V\) and \(\norm{u} = \norm{v} = 1\) and \(\inp{u}{v} = 1\). Prove that \(u = v\).
+	Suppose \( u, v \in V \) and \( \norm{u} = \norm{v} = 1 \) and \( \inp{u}{v} = 1 \). Prove that \( u = v \).
 \end{exercise}
 
 \begin{proof}
@@ -41,7 +41,7 @@
 	\[
 		\norm{u - v}^{2} = \inp{u - v}{u - v} = \norm{u}^{2} - \inp{u}{v} - \inp{v}{u} + \norm{v}^{2} = 0.
 	\]
-	Hence \(u - v = 0\) by definiteness.
+	Hence \( u - v = 0 \) by definiteness.
 \end{proof}
 
 \begin{exercise}{11}
@@ -49,17 +49,21 @@
 	\[
 		16 \le (a + b + c + d)\left(\frac{1}{a} + \frac{1}{b} + \frac{1}{c} + \frac{1}{d}\right)
 	\]
-	for all positive numbers \(a, b, c, d\).
+	for all positive numbers \( a, b, c, d \).
 \end{exercise}
 
 \begin{proof}
-	Let \(u = \left(\sqrt{a}, \sqrt{b}, \sqrt{c}, \sqrt{d}\right), v = \left(\frac{1}{\sqrt{a}}, \frac{1}{\sqrt{b}}, \frac{1}{\sqrt{c}}, \frac{1}{\sqrt{d}}\right)\). Then it follows directly from the Cauchy-Schuarz Inequality.
+	Let \( u = \left(\sqrt{a}, \sqrt{b}, \sqrt{c}, \sqrt{d}\right), v = \left(\frac{1}{\sqrt{a}}, \frac{1}{\sqrt{b}}, \frac{1}{\sqrt{c}}, \frac{1}{\sqrt{d}}\right) \). Then it follows directly from the Cauchy-Schuarz Inequality.
 \end{proof}
 
 \begin{exercise}{17}
-	Prove or disprove: there is an inner product on \(\R^{2}\) such that the associated norm is given by
+	Prove or disprove: there is an inner product on \( \R^{2} \) such that the associated norm is given by
 	\[
 		\norm{(x, y)} = \max\{x, y\}
 	\]
-	for all \((x, y) \in \R^{2}\).
+	for all \( (x, y) \in \R^{2} \).
 \end{exercise}
+
+\begin{proof}[Counterexample]
+	Let \( u = (0, 1), v = (1, 0) \). Then 6.22 fails.
+\end{proof}
