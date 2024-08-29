@@ -1,0 +1,39 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{matheo} % math-theorem
+
+%------------------------------------------------------------------------------%
+
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+
+% Remove extra space around \left & \right.
+\let\originalleft\left
+\renewcommand{\left}{\mathopen{}\mathclose\bgroup\originalleft}
+\let\originalright\right
+\renewcommand{\right}{\aftergroup\egroup\originalright}
+
+% Set set presets.
+\newcommand{\N}{\mathbf{N}}
+\newcommand{\Q}{\mathbf{Q}}
+\newcommand{\R}{\mathbf{R}}
+\newcommand{\C}{\mathbf{C}}
+\newcommand{\F}{\mathbf{F}}
+
+% Absolute Value (|) and Norm (||)
+\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
+
+% Inner Products
+\newcommand{\inp}[2]{\left\langle #1, #2 \right\rangle}
+
+% Use prettier signs.
+\renewcommand{\le}{\leqslant}
+\renewcommand{\ge}{\geqslant}
+
+%------------------------------------------------------------------------------%
+
+\RequirePackage{amsthm}
+
+% Proofs and Solutions
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\newenvironment{solution}{\begin{proof}[Solution]}{\end{proof}}

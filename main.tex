@@ -3,33 +3,14 @@
 
 \documentclass[oneside]{book}
 
-% Fix the extra space around \left & \right.
-\let\originalleft\left
-\renewcommand{\left}{\mathopen{}\mathclose\bgroup\originalleft}
-\let\originalright\right
-\renewcommand{\right}{\aftergroup\egroup\originalright}
-
-\usepackage{mathp}
+\usepackage{matheo}
 
 \DeclareMathAlphabet{\mathcal}{OMS}{zplm}{m}{n}
 \DeclareMathOperator{\Lmap}{\mathcal{L}}
 
 \newcommand{\conj}{\overline}
 
-\newcommand{\inp}[2]{\left\langle #1, #2 \right\rangle}
-\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
-\newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
-
 \DeclareMathOperator{\nul}{null}
-
-% Use prettier symbols.
-\renewcommand{\le}{\leqslant}
-\renewcommand{\ge}{\geqslant}
-
-% Proofs and Solutions
-\usepackage{amsthm}
-\renewcommand{\qedsymbol}{$\blacksquare$}
-\newenvironment{solution}{\begin{proof}[Solution]}{\end{proof}}
 
 \usepackage{newtxmath}
 
