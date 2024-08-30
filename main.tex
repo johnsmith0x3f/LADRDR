@@ -5,18 +5,22 @@
 
 \usepackage{matheo}
 
+\DeclareMathOperator{\dd}{d}
+
 \DeclareMathAlphabet{\mathcal}{OMS}{zplm}{m}{n}
 \DeclareMathOperator{\Lmap}{\mathcal{L}}
+\DeclareMathOperator{\Poly}{\mathcal{P}}
 
 \newcommand{\conj}{\overline}
 
 \DeclareMathOperator{\nul}{null}
 
-
 % Set the fonts.
 \usepackage{fontspec}
-\setmainfont{Times New Roman}
+% \setmainfont{Times New Roman}
 \setsansfont{Arial}
+
+\usepackage{fourier-otf}
 
 \usepackage{titlesec}
 \renewcommand{\thesection}{\arabic{chapter}.\Alph{section}}

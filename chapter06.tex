@@ -53,7 +53,21 @@
 \end{exercise}
 
 \begin{proof}
-	Let \( u = \left(\sqrt{a}, \sqrt{b}, \sqrt{c}, \sqrt{d}\right), v = \left(\frac{1}{\sqrt{a}}, \frac{1}{\sqrt{b}}, \frac{1}{\sqrt{c}}, \frac{1}{\sqrt{d}}\right) \). Then it follows directly from the Cauchy-Schuarz Inequality.
+	By Exercise 6.17(a), we have
+	\begin{align*}
+		16 &= \abs{\sqrt{a \cdot \frac{1}{a}} + \sqrt{b \cdot \frac{1}{b}} + \sqrt{c \cdot \frac{1}{c}} + \sqrt{d \cdot \frac{1}{d}}}^{2} \\
+			 &\le (a + b + c + d)\left(\frac{1}{a} + \frac{1}{b} + \frac{1}{c} + \frac{1}{d}\right). \qedhere
+	\end{align*}
+\end{proof}
+
+\begin{exercise}{12} Prove that \[
+		(x_{1} + x_{2} + \cdots + x_{n})^{2} \le n\left(x_{1}^{2} + x_{2}^{2} + \cdots + x_{n}^{2}\right)
+	\]
+	for all positive integers \( n \) and all real numbers \( x_{1}, \ldots, x_{n} \).
+\end{exercise}
+
+\begin{proof}
+	In Exercise 6.17(a), let \( y_{1} = y_{2} = \cdots = y_{n} = 1 \).
 \end{proof}
 
 \begin{exercise}{17}
@@ -64,6 +78,23 @@
 	for all \( (x, y) \in \R^{2} \).
 \end{exercise}
 
-\begin{proof}[Counterexample]
+\begin{countexam}
 	Let \( u = (0, 1), v = (1, 0) \). Then 6.22 fails.
-\end{proof}
+\end{countexam}
+
+\section{Orthonormal Bases}
+
+\begin{exercise}
+	Find a polynomial \( q \in \Poly_{2}(\R) \) such that
+	\[
+		p\left(\frac{1}{2}\right) = \int_{0}^{1} p(x)q(x)\dd{x}
+	\]
+	for every \( p \in \Poly_{2}(\R) \).
+\end{exercise}
+
+\begin{solution}
+	Let \( \varphi(p) = p\left(\frac{1}{2}\right) \) and \( \inp{p}{q} = \int_{0}^{1} p(x)q(x)\dd{x} \). Then with the orthonormal basis found in Exercise 5 and the formula in 6.43, we can find that
+	\[
+		q(x) = -15x^{2} + 15x - \frac{3}{2}. \qedhere
+	\]
+\end{solution}
