@@ -1,0 +1,26 @@
+\chapter{Vector Spaces}
+
+\section{\texorpdfstring{$\R^{n}$}{R\^{}n} and \texorpdfstring{$\C^{n}$}{C\^{}n}}
+
+\section{Definition of Vector Space}
+
+\section{Subspaces}
+
+\begin{exercise}{12}
+	Prove that the union of two subspaces of \( V \) is a subspace of \( V \) if
+	and only if one of the subspaces is contained in the other.
+\end{exercise}
+
+\begin{proof}
+	Suppose \( U \) and \( W \) are subspaces of \( V \), such that \( U \cup W \)
+	is also a subspace and neither is contained in the other.
+	In other words, \( U \not\subset W \) and \( W \not\subset U \).
+	Let \( u \in U - W \) and \( w \in W - U \).
+	Since \( U \cup W \) is a subspace of \( V \), we have \( u + w \in U \cup W \).
+	However,
+	\begin{align*}
+		u + w \in U &\Rightarrow w = (u + w) - u \in U, \\
+		u + w \in W &\Rightarrow u = (u + w) - w \in W,
+	\end{align*}
+	which implies that \( u + w \) is in neither \( U \) nor \( W \), a contradiction.
+\end{proof}

@@ -15,12 +15,12 @@
 
 \DeclareMathOperator{\nul}{null}
 
+\usepackage{mathptmx}
+
 % Set the fonts.
 \usepackage{fontspec}
-% \setmainfont{Times New Roman}
+\setmainfont{Times New Roman}
 \setsansfont{Arial}
-
-\usepackage{fourier-otf}
 
 \usepackage{titlesec}
 \renewcommand{\thesection}{\arabic{chapter}.\Alph{section}}
@@ -36,6 +36,8 @@
 	boxrule = 0pt, toprule = 3pt, bottomrule = 3pt, colframe = exmain % frame
 }
 
+\usepackage{hyperref}
+
 \title{LADR Done Right}
 \author{johnsmith0x3f}
 \date{\today}
@@ -43,6 +45,9 @@
 \begin{document}
 
 \maketitle
+\tableofcontents
+
+\input{chapter01.tex}
 
 \input{chapter06.tex}
 
