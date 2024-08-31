@@ -1,8 +1,37 @@
 \chapter{Vector Spaces}
 
+%%% R^n and C^n {{{
+
 \section{\texorpdfstring{$\R^{n}$}{R\^{}n} and \texorpdfstring{$\C^{n}$}{C\^{}n}}
 
+\begin{exercise}{7}
+	Show that for every \( \alpha \in \C \), there exists a unique \( \beta \in \C \)
+	such that \( \alpha + \beta = 0 \).
+\end{exercise}
+
+\begin{proof}
+	Suppose \( \alpha = a + bi \). Let \( \beta = -a - bi \). Then
+	\[
+		\alpha + \beta = (a - a) + (b - b)i = 0,
+	\]
+	proving existence.
+
+	Suppose there exists \( \gamma \in \C \) such that \( \alpha + \gamma = 0 \). Then
+	\[
+		\gamma = \gamma + (\alpha + \beta) = (\gamma + \alpha) + \beta = \beta,
+	\]
+	proving uniqueness.
+\end{proof}
+
+%%% }}}
+
+%%% Definition of Vector Space {{{
+
 \section{Definition of Vector Space}
+
+%%% }}}
+
+%%% Subspaces {{{
 
 \section{Subspaces}
 
@@ -24,3 +53,5 @@
 	\end{align*}
 	which implies that \( u + w \) is in neither \( U \) nor \( W \), a contradiction.
 \end{proof}
+
+%%% }}}
