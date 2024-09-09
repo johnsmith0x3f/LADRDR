@@ -13,26 +13,35 @@
 
 \newcommand{\conj}{\overline}
 
+\newcommand{\note}[1]{[\textit{#1}]}
+
 \DeclareMathOperator{\nul}{null}
 
 % Set the fonts.
 \usepackage{fontspec}
-\usepackage{pxfonts}
-\setmainfont{Linux Libertine}
+\setmainfont{Times New Roman}
 \setsansfont{Arial}
+\usepackage{newtxtext}
+\usepackage{newtxmath}
 
 \usepackage{titlesec}
 \renewcommand{\thesection}{\arabic{chapter}.\Alph{section}}
 
 \usepackage[many]{tcolorbox}
-\definecolor{exmain}{HTML}{CA6C37}
-\definecolor{exback}{HTML}{FEF9DA}
-\newtcolorbox{exercise}[1] {
-	title = {Exercise #1}, fonttitle = {\sffamily\bfseries}, coltitle = exmain,
+\definecolor{exercisemain}{HTML}{CA6C37}
+\definecolor{exerciseback}{HTML}{FEF9DA}
+\newtcolorbox{exercise}[1]{
+	title = {Exercise #1},
+	fonttitle = {\sffamily\bfseries},
+	coltitle = exercisemain,
 	attach title to upper = {\quad}, % title
-	colback = exback, % background
-	sharp corners, enhanced jigsaw,
-	boxrule = 0pt, toprule = 3pt, bottomrule = 3pt, colframe = exmain % frame
+	colback = exerciseback, % background
+	sharp corners,
+	enhanced jigsaw,
+	boxrule = 0pt,
+	toprule = 2pt,
+	bottomrule = 2pt,
+	colframe = exercisemain % frame
 }
 
 \usepackage{hyperref}
@@ -40,6 +49,12 @@
 \title{LADR Done Right}
 \author{johnsmith0x3f}
 \date{\today}
+
+\AtBeginDocument{
+  \mathchardef\stdcomma=\mathcode`,
+  \mathcode`,="8000
+}
+\begingroup\lccode`~=`, \lowercase{\endgroup\def~}{\stdcomma\,}
 
 \begin{document}
 
