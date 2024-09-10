@@ -50,7 +50,7 @@
 \end{exercise}
 
 \begin{solution}
-	No. If it is a vector space over \( \R \), then we have
+	No. If it is a vector space over \( \R \), we will have
 	\[
 		1 = 1 + 0 = 1 + (\infty + (-\infty)) = (1 + \infty) + (-\infty) = \infty + (-\infty) = 0,
 	\]
@@ -68,10 +68,19 @@ A function \( f: \R \to \R \) is called \textbf{\textit{periodic}} if there exis
 \end{exercise}
 
 \begin{solution}
-	No. Consider two periodic functions \( f(x) = \cos x, g(x) = \sin\pi x \). Suppose the set of periodic functions from \( \R \) to \( \R \) a subspace of \( \R^{\R} \). Then the function \( h(x) = f(x) + g(x) \) should be a periodic function. In other words, there exists \( p > 0 \) such that \( f(-p) = f(0) = f(p) \), which implies
+	No. If the set of periodic functions from \( \R \) to \( \R \) is a subspace of \( \R^{\R} \), then the function \( h(x) = \cos x + \sin\pi x \) would also be a periodic function since both \( f(x) = \cos x \) and \( g(x) = \sin\pi x \) are such functions. In other words, there exists \( p > 0 \) such that
+	\[
+		h(-p) = h(0) = h(p),
+	\]
+	which is equivalent to
 	\[
 		\cos p - \sin\pi p = 1 = \cos p + \sin\pi p.
 	\]
+	Hence we have \( \cos p = 1 \), which implies \( p = 2n\pi (n \in \Z_{+}) \), and \( \sin\pi p = 0 \), which implies \( p = m (m \in \Z_{+}) \). However, this means
+	\[
+		\pi = \frac{m}{2n} \in \Q,
+	\]
+	which is impossible.
 \end{solution}
 
 \begin{exercise}{12}
