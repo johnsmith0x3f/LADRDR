@@ -30,10 +30,7 @@
 \section{Definition of Vector Space}
 
 \begin{exercise}{6}
-	Let \( \infty \) and \( -\infty \) denote two distinct objects, neither of
-	which is in \( \R \). Define an addition and scalar multiplication on
-	\( \R \cup \{\infty\} \cup \{-\infty\} \) as you could guess from the notation.
-	Specifically, the sum and product of two real numbers is as usual, and for
+	Let \( \infty \) and \( -\infty \) denote two distinct objects, neither of which is in \( \R \). Define an addition and scalar multiplication on \( \R \cup \{\infty\} \cup \{-\infty\} \) as you could guess from the notation. Specifically, the sum and product of two real numbers is as usual, and for
 	\( t \in \R \) define
 	\begin{gather*}
 		t\infty = \begin{cases}
@@ -82,14 +79,14 @@ A function \( f: \R \to \R \) is called \textbf{\textit{periodic}} if there exis
 \end{exercise}
 
 \begin{proof}
-	Suppose \( U \) and \( W \) are subspaces of \( V \), such that \( U \cup W \) is also a subspace and neither is contained in the other. In other words, \( U \not\subset W \) and \( W \not\subset U \). Let \( u \in U - W \) and \( w \in W - U \). Since \( U \cup W \) is a subspace of \( V \), we have \( u + w \in U \cup W \). However,
+	Suppose \( U \) and \( W \) are two subspaces of \( V \), such that \( U \cup W \) is also a subspace and neither is contained in the other. In other words, \( U \not\subset W \) and \( W \not\subset U \). Let \( u \in U - W \) and \( w \in W - U \). Since \( U \cup W \) is a subspace of \( V \), we have \( u + w \in U \cup W \). However,
 	\begin{align*}
 		u + w \in U \quad &\Rightarrow \quad w = (u + w) - u \in U, \\
 		u + w \in W \quad &\Rightarrow \quad u = (u + w) - w \in W,
 	\end{align*}
 	which implies that \( u + w \) is in neither \( U \) nor \( W \), a contradiction.
 
-	Conversely, suppose one of \( U \) and \( W \) is contained in the other. Without loss of generality, we assume \( U \subset W \). Then \( U \cup W = W \) is a subspace of \( V \).
+	Conversely, suppose one of \( U \) and \( W \) is contained in the other. Without loss of generality, we assume \( U \subset W \). Then \( U \cup W = W \) is obviously a subspace of \( V \).
 \end{proof}
 
 \begin{exercise}{13}
@@ -100,10 +97,14 @@ A function \( f: \R \to \R \) is called \textbf{\textit{periodic}} if there exis
 
 \begin{proof}
 	One direction is obvious. Without loss of generality, suppose \( A, B, C \) are three subspaces of \( V \) satisfying \( A \cup B \subset C \). Then \( A \cup B \cup C = C \) is a subspace of \( V \).
+	
+	To prove the other direction, suppose \( S = A \cup B \cup C \) is a subspace of \( V \). If \( A \in B \cup C \), then \( B \cup C = S \) is a subspace.
 
-	To prove the other direction, one may notice that \( A \cup B \cup C = A \cup (B \cup C) \), and hence may try using the same approach as in the previous exercise, where one would get stuck for \( B \cup C \) is not neccessarily a subspace of \( V \). However, Exercise 11 informs that, fortunately, \( B \cap C \) is a subspace of \( V \).
+	Since \( S \) is a subspace, we have \( u_{1} = a + b - c \in S \). Then at least one of \( u_{1} \in A, u_{1} \in B, u_{1} \in C \) holds. Suppose \( u_{1} \in A \). Consider 
 
-	Let \( u \in A - (B \cup C), a = (B \cap C) - A \). If \( u + a \in A \), then we have \( a \in A \), a contradiction. If \( u + a \in B \cap C \), then we have \( u \in B \cap C \subset B \cup C \), also a contradiction. Hence \( u + a \in S - (A \cup (B \cap C)) \)
+%	To prove the other direction, one may notice that \( A \cup B \cup C = A \cup (B \cup C) \), and hence may try using the same approach as in the previous exercise, where one would get stuck for \( B \cup C \) is not neccessarily a subspace of \( V \). However, Exercise 11 informs that, fortunately, \( B \cap C \) is a subspace of \( V \).
+
+%	Let \( u \in A - (B \cup C), a = (B \cap C) - A \). If \( u + a \in A \), then we have \( a \in A \), a contradiction. If \( u + a \in B \cap C \), then we have \( u \in B \cap C \subset B \cup C \), also a contradiction. Hence \( u + a \in S - (A \cup (B \cap C)) \)
 \end{proof}
 
 %%% }}}
