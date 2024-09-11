@@ -50,7 +50,7 @@
 \end{exercise}
 
 \begin{solution}
-	No. If it is a vector space over \( \R \), we will have
+	No. If \( \R \cup \{\infty\} \cup \{-\infty\} \) is a vector space over \( \R \), we will have
 	\[
 		1 = 1 + 0 = 1 + (\infty + (-\infty)) = (1 + \infty) + (-\infty) = \infty + (-\infty) = 0,
 	\]
@@ -68,15 +68,11 @@ A function \( f: \R \to \R \) is called \textbf{\textit{periodic}} if there exis
 \end{exercise}
 
 \begin{solution}
-	No. If the set of periodic functions from \( \R \) to \( \R \) is a subspace of \( \R^{\R} \), then the function \( h(x) = \cos x + \sin\pi x \) would also be a periodic function since both \( f(x) = \cos x \) and \( g(x) = \sin\pi x \) are such functions. In other words, there exists \( p > 0 \) such that
-	\[
-		h(-p) = h(0) = h(p),
-	\]
-	which is equivalent to
+	No. Let \( F_{p} \) denote the set of periodic functions from \( \R \) to \( \R \). If \( F_{p} \) is a subspace of \( \R^{\R} \), then \( h(x) = \cos x + \sin\pi x \in F_{p} \) since both \( f(x) = \cos x \) and \( g(x) = \sin\pi x \) are in \( F_{p} \). In other words, there exists \( p > 0 \) such that
 	\[
 		\cos p - \sin\pi p = 1 = \cos p + \sin\pi p.
 	\]
-	Hence we have \( \cos p = 1 \), which implies \( p = 2n\pi (n \in \Z_{+}) \), and \( \sin\pi p = 0 \), which implies \( p = m (m \in \Z_{+}) \). However, this means
+	Hence we have \( \cos p = 1 \) and \( \sin\pi p = 0 \). The former implies \( p = 2n\pi (n \in \Z_{+}) \), while the latter implies \( p = m (m \in \Z_{+}) \). However, this means
 	\[
 		\pi = \frac{m}{2n} \in \Q,
 	\]
@@ -107,9 +103,11 @@ A function \( f: \R \to \R \) is called \textbf{\textit{periodic}} if there exis
 \begin{proof}
 	One direction is obvious. Without loss of generality, suppose \( A, B, C \) are three subspaces of \( V \) satisfying \( A \cup B \subset C \). Then \( A \cup B \cup C = C \) is a subspace of \( V \).
 	
-	To prove the other direction, suppose \( S = A \cup B \cup C \) is a subspace of \( V \). If \( A \in B \cup C \), then \( B \cup C = S \) is a subspace.
-
-	Since \( S \) is a subspace, we have \( u_{1} = a + b - c \in S \). Then at least one of \( u_{1} \in A, u_{1} \in B, u_{1} \in C \) holds. Suppose \( u_{1} \in A \). Consider 
+	Suppose \( A \not\subset B \cup C \). Let \( v \in A - (B \cup C) \) and \( w \in B - A \). Then \( v + w \) is in neither \( A \) nor \( B \), and hence is in \( C \). Consider the vector \( 2v \). For any subspace \( S \), \( 2v \in S \) if and only if \( v \in S \). Hence \( 2v \in A - (B \cup C) \), which implies \( 2v + w \in C \). However, this deduces
+	\[
+		v = (2v + w) - (v + w) \in C,
+	\]
+	a contradiction.
 
 %	To prove the other direction, one may notice that \( A \cup B \cup C = A \cup (B \cup C) \), and hence may try using the same approach as in the previous exercise, where one would get stuck for \( B \cup C \) is not neccessarily a subspace of \( V \). However, Exercise 11 informs that, fortunately, \( B \cap C \) is a subspace of \( V \).
 
