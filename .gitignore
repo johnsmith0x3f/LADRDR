@@ -2,6 +2,7 @@
 *
 !.gitignore
 
+!*.md
 !*.tex
 !*.sty
 !*.pdf
