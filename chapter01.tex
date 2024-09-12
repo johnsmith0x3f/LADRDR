@@ -84,14 +84,9 @@ A function \( f: \R \to \R \) is called \textbf{\textit{periodic}} if there exis
 \end{exercise}
 
 \begin{proof}
-	Suppose \( U \) and \( W \) are two subspaces of \( V \), such that \( U \cup W \) is also a subspace and neither is contained in the other. In other words, \( U \not\subset W \) and \( W \not\subset U \). Let \( u \in U - W \) and \( w \in W - U \). Since \( U \cup W \) is a subspace of \( V \), we have \( u + w \in U \cup W \). However,
-	\begin{align*}
-		u + w \in U \quad &\Rightarrow \quad w = (u + w) - u \in U, \\
-		u + w \in W \quad &\Rightarrow \quad u = (u + w) - w \in W,
-	\end{align*}
-	which implies that \( u + w \) is in neither \( U \) nor \( W \), a contradiction.
+	Suppose \( U \) and \( W \) are two subspaces of \( V \) such that \( U \cup W \) is also a subspace of \( V \). If \( U \subseteq W \), then there is nothing to proof. Otherwise, take \( u \in U \setminus W, w \in W \) and consider \( u + w \in U \cup W \). It cannot be in \( W \), since then will be \( u = (u + w) - w \in W \). Therefore, there must be \( u + w \in U \), and hence \( w = (u + w) - u \in U \), which implies \( W \subseteq U \), as desired.
 
-	Conversely, suppose one of \( U \) and \( W \) is contained in the other. Without loss of generality, we assume \( U \subset W \). Then \( U \cup W = W \) is obviously a subspace of \( V \).
+	Conversely, suppose one of \( U \) and \( W \) is contained in the other. Without loss of generality, we assume \( U \subseteq W \). Then \( U \cup W = W \) is obviously a subspace of \( V \).
 \end{proof}
 
 \begin{exercise}{13}
