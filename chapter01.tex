@@ -98,7 +98,9 @@ A function \( f: \R \to \R \) is called \textbf{\textit{periodic}} if there exis
 \begin{proof}
 	Suppose \( A, B, C \) are three subspaces of \( V \) such that \( S = A \cup B \cup C \) is also a subspace of \( V \).
 
-	If \( A \subseteq B \), then by Exercise 12, one of \( B \subseteq C \)
+	If \( A \subseteq B \), then by Exercise 12, one of \( B \subseteq C \) and \( C \subseteq B \) must hold, and both cases lead to \( S \in \{A, B, C\} \).
+
+	Otherwise if \( B \subseteq A \cup C \), then .
 	
 	Let \( v \in A - (B \cup C) \) and \( w \in B - A \). Then \( v + w \) is in neither \( A \) nor \( B \), and hence is in \( C \). Consider the vector \( 2v \). For any subspace \( S \), \( 2v \in S \) if and only if \( v \in S \). Hence \( 2v \in A - (B \cup C) \), which implies \( 2v + w \in C \). However, this deduces
 	\[
