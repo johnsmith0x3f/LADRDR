@@ -2,6 +2,49 @@
 
 \section{Span and Linear Independence}
 
+\begin{exercise}{10}
+	Suppose \( v_{1}, \ldots, v_{m} \) is linearly independent in \( V \) and \( w \in V \). Prove that if \( v_{1} + w, \ldots, v_{m} + w \) is linearly dependent, then \( w \in \spanspace(v_{1}, \ldots, v_{m}) \).
+\end{exercise}
+
+\begin{proof}
+	If \( v_{1} + w, \ldots, v_{m} + w \) is linearly dependent, then there exists \( a_{1}, \ldots, a_{m} \), not all \( 0 \), such that
+	\begin{align*}
+		a_{1}(v_{1} + w) + \cdots + a_{m}(v_{m} + w) &= 0, \\
+		            a_{1}v_{1} + \cdots + a_{m}v_{m} &= -(a_{1} + \cdots + a_{m})w.
+	\end{align*}
+	Since \( v_{1} + w, \ldots, v_{m} + w \) is linearly dependent, \( a_{1} + \cdots + a_{m} \neq 0 \), and hence
+	\[
+		w = \frac{-a_{1}}{a_{1} + \cdots + a_{m}}v_{1} + \cdots + \frac{-a_{m}}{a_{1} + \cdots + a_{m}}v_{m} \in \spanspace(v_{1}, \ldots, v_{m}),
+	\]
+	as desired.
+\end{proof}
+
 \section{Bases}
 
+\begin{exercise}{8}
+	Suppose \( U \) and \( W \) are subspaces of \( V \) such that \( V = U \oplus W \). Suppose also that \( u_{1}, \ldots, u_{m} \) is a basis of \( U \) and \( w_{1}, \ldots, w_{n} \) is a basis of \( W \). Prove that
+	\[
+		u_{1}, \ldots, u_{m}, w_{1}, \ldots, w_{n}
+	\]
+	is a basis of \( V \).
+\end{exercise}
+
+\begin{proof}
+	Consider an arbitary \( v \in V \). Since \( V = U \oplus W \), there are unique vectors \( u \in U \) and \( w \in W \) such that \( v = u + w \). Hence there are unique scalars \( a_{1}, \ldots, a_{m}, b_{1}, \ldots, b_{n} \) such that
+	\[
+		v = u + w = a_{1}u_{1} + \cdots + a_{m}u_{m} + b_{1}w_{1} + \cdots + b_{n}w_{n},
+	\]
+	which, by 2.29, implies that \( u_{1}, \ldots, u_{m}, w_{1}, \ldots, w_{n} \) is a basis of \( V \).
+\end{proof}
+
 \section{Dimension}
+
+\begin{exercise}{17}
+	You might guess, by analogy with the formula for the number of elements in the union of three subsets of a finite set, that if \( U_{1}, U_{2}, U_{3} \) are subspaces of a finite-dimensional vector space, then
+	\begin{align*}
+		\dim(U_{1} + U_{2} + U_{3}) =& \dim{U_{1}} + \dim{U_{2}} + \dim{U_{3}} \\
+		                             &- \dim(U_{1} \cap U_{2}) - \dim(U_{2} \cap U_{3}) - \dim(U_{3} \cap U_{1}) \\
+																 &+ \dim(U_{1} \cap U_{2} \cap U_{3}).
+	\end{align*}
+	Prove this or give a counterexample.
+\end{exercise}
