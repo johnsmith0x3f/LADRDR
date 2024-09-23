@@ -25,6 +25,10 @@
 \newcommand{\C}{\mathbf{C}}
 \newcommand{\F}{\mathbf{F}}
 
+% Left/Right Hand Side
+\newcommand{\LHS}{\mathrm{LHS}}
+\newcommand{\RHS}{\mathrm{RHS}}
+
 % Absolute Value (|) and Norm (||)
 \newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
 \newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
@@ -45,5 +49,6 @@
 
 % Proofs and Solutions
 \renewcommand{\qedsymbol}{$\blacksquare$}
-\newenvironment{solution}{\begin{proof}[Solution]}{\end{proof}}
-\newenvironment{countexam}{\begin{proof}[Counterexample]}{\end{proof}}
+\newenvironment{hint}{\renewcommand{\qedsymbol}{}\begin{proof}}{\end{proof}}
+\newenvironment{solution}{\renewcommand{\qedsymbol}{}\begin{proof}[Solution]}{\end{proof}}
+\newenvironment{countexam}{\renewcommand{\qedsymbol}{}\begin{proof}[Counterexample]}{\end{proof}}
