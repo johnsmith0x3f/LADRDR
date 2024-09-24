@@ -23,6 +23,25 @@ Prove that \( T \) is not a linear map on \( V \).
 
 \section{Null Spaces and Ranges}
 
+\begin{exercise}{29}
+	Suppose \( \varphi \in \lmap(V, \F) \). Suppose \( u \in V \) is not in \( \nullspace{\varphi} \). Prove that
+	\[
+		V = \nullspace{\varphi} \oplus \{au : a \in \F\}.
+	\]
+\end{exercise}
+
+\begin{proof}
+	For arbitary \( v \in V \), since \( \varphi(u) \neq 0 \), we have
+	\[
+		\varphi\left(v - \frac{\varphi(v)}{\varphi(u)}u\right) = \varphi(v) - \varphi\left(\frac{\varphi(v)}{\varphi(u)}u\right) = \varphi(v) - \frac{\varphi(v)}{\varphi(u)}\varphi(u) = 0.
+	\]
+	This implies \( v - \frac{\varphi(v)}{\varphi(u)}u = w \) for some \( w \in \nullspace{\varphi} \), and hence
+	\[
+		v = w + \frac{\varphi(v)}{\varphi(u)}u \in \nullspace{\varphi} + \{au : a \in \F\}.
+	\]
+	Therefore, \( V = \nullspace{\varphi} + \{au : a \in \F\} \). Since \( \nullspace{\varphi} \cap \{au : a \in \F\} = \{0\} \), by 1.45, we have \( V = \nullspace{\varphi} \oplus \{au : a \in \F\} \).
+\end{proof}
+
 \section{Matrices}
 
 \section{Invertibility and Isomorphic Vector Spaces}
