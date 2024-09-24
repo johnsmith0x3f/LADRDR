@@ -2,6 +2,25 @@
 
 \section{The Vector Space of Linear Maps}
 
+\begin{exercise}{10}
+	Suppose \( U \) is a subspace of \( V \) with \( U \neq V \). Suppose \( S \in \lmap(U, W) \) and \( S \neq 0 \) (which means that \( Su \neq 0 \) for some \( u \in U \) ). Define \( T \in \lmap(V, W) \) by
+	\[
+		Tv = \begin{cases}
+			Sv & \text{if} \ v \in U, \\
+			0  & \text{if} \ v \in V \ \text{and} \ v \not\in U.
+		\end{cases}
+	\]
+Prove that \( T \) is not a linear map on \( V \).
+\end{exercise}
+
+\begin{proof}
+	Take \( u \in U \) such that \( Su \neq 0 \). Since \( U \neq V \), there exists \( v \in V \setminus U \). Then
+	\[
+		T(u - v) + Tv = 0 + 0 = 0 \neq Su = Tu.
+	\]
+	Hence \( T \) is not a linear map.
+\end{proof}
+
 \section{Null Spaces and Ranges}
 
 \section{Matrices}
