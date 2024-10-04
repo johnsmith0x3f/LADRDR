@@ -44,6 +44,23 @@ Prove that \( T \) is not a linear map on \( V \).
 
 \section{Matrices}
 
+\begin{exercise}{15}
+	Suppose \( A \) is an \( n \)-by-\( n \) matrix and \( 1 \le j, k \le n \). Show that the entry in row j, column \( k \), of \( A^{3} \) (which is defined to mean \( AAA \)) is
+	\[
+		\sum_{p = 1}^{n} \sum_{r = 1}^{n} A_{j,p}A_{p,r}A_{r,k}.
+	\]
+\end{exercise}
+
+\begin{proof}
+	By the definition of matrix multiplication, we have
+	\begin{align*}
+		(A^{3})_{j,k} &= (AA^{2})_{j,k} \\
+									&= \sum_{p = 1}^{n} A_{j,p}(A^{2})_{p,k} \\
+									&= \sum_{p = 1}^{n} A_{j,p} \sum_{r = 1}^{n} A_{p,r}A_{r,k} \\
+									&= \sum_{p = 1}^{n} \sum_{r = 1}^{n} A_{j,p}A_{p,r}A_{r,k}. \qedhere
+	\end{align*}
+\end{proof}
+
 \section{Invertibility and Isomorphic Vector Spaces}
 
 \section{Products and Quotients of Vector Spaces}
