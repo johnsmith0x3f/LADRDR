@@ -1,0 +1,28 @@
+\chapter{Polynomials}
+
+\begin{exercise}{6}
+	Suppose \( p \in \poly(\C) \) has degree m. Prove that \( p \) has \( m \) distinct zeros if
+and only if \( p \) and its derivative \( p' \) have no zeros in common.
+\end{exercise}
+
+\begin{proof}
+	We will prove by contrapositive. Suppose \( p \) and \( p' \) have a zero in common, say \( \lambda \). Then by 4.14, we can write \( p(z) = (z - \lambda)q(z) \). Hence
+	\[
+		p'(\lambda) = q(\lambda) + (\lambda - \lambda)q'(\lambda) = 0,
+	\]
+	which implies \( q(\lambda) = 0 \). Therefore, \( p \) has a zero \( \lambda \) of multiplicity at least \( 2 \).
+
+	Now suppose \( p \) has a zero \( \lambda \) of multiplicity \( k > 1 \). Then, again by 4.14, we can write \( p(z) = (z - \lambda)^2q(z) \). Hence
+	\[
+		p'(\lambda) = 2(\lambda - \lambda)q(\lambda) + (\lambda - \lambda)^2q'(\lambda) = 0,
+	\]
+	which implies \( \lambda \) is also a zero of \( p' \).
+\end{proof}
+
+\begin{exercise}{7}
+	Prove that every polynomial of odd degree with real coefficients has a real zero.
+\end{exercise}
+
+\begin{proof}
+	The assertion follows directly from 4.17.
+\end{proof}
