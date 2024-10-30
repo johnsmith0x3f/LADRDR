@@ -26,3 +26,15 @@ and only if \( p \) and its derivative \( p' \) have no zeros in common.
 \begin{proof}
 	The assertion follows directly from 4.17.
 \end{proof}
+
+\begin{exercise}{10}
+	Suppose \( m \) is a nonnegative integer and \( p \in \poly_{m}(\C) \) is such that there exist distinct real numbers \( x_{0}, x_{1}, \ldots, x_{m} \) such that \( p(x_{j}) \in \R \) for \( j = 0, 1, \ldots, m \). Prove that all the coefficients of \( p \) are real.
+\end{exercise}
+
+\begin{proof}
+	Consider
+	\[
+		q(z) = p(z) - \sum_{j = 0}^{m} \frac{\prod_{i \neq j} (z - x_{i})}{\prod_{i \neq j} (x_{j} - x_{i})}p(x_{j}).
+	\]
+	Note that \( q(x_{j}) = 0 \) for \( j = 0, 1, \ldots, m \). Since \( q \) has degree at most \( m \), it must be the zero polynomial. Therefore, all the coefficients of \( p \) are real.
+\end{proof}
